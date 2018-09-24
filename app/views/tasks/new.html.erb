@@ -1,0 +1,12 @@
+<h1>NEW TASK FORM OK</h1>
+
+<h2><%= link_to "NVM NVM GO BACK =(", tasks_path %></h2>
+
+<%= form_with model: @task do |f| %>
+
+<%= f.text_field :action, placeholder: "ACTION BB?" %>
+
+<%= f.text_field :description, placeholder: "describe softly to me bb....", class: "describe" %>
+<%= f.submit "Save Tassssk" %>
+
+<% end %>

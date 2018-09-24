@@ -1,0 +1,175 @@
+html {
+  height: 100%;
+}
+
+body {
+  height: 75%;
+  margin-left: 25%;
+  margin-right: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: Helvetica, sans-serif;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100%;
+}
+
+h1:hover {
+  animation-name: spin;
+  animation-duration: 2s;
+  animation-timing-function: ease;
+}
+
+.center {
+  height: 75%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-top: 10%;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 600px;
+}
+
+.buttons {
+  white-space: nowrap;
+}
+
+h2 {
+  border: 1px solid blue;
+  border-radius: 20px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 5px;
+  padding-bottom: 2px;
+}
+
+h2:hover {
+  color: white;
+}
+
+h2:hover {
+  background-color: blue;
+}
+
+h2 a {
+  text-decoration: none;
+  color: black;
+}
+
+h2:hover a {
+  color: white;
+}
+
+.tasks {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+ul {
+  margin-top: -10%;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+
+li {
+  text-align: right;
+  color: black;
+}
+
+li a {
+  text-decoration: none;
+  color: black;
+}
+
+li:hover {
+  border: 5px dashed pink;
+  padding-left: 50px;
+  padding-right: 15px;
+  box-shadow: 2px 2px 3px black;
+}
+
+li:hover h3 {
+  color: dodgerblue;
+}
+li:hover del {
+  text-shadow: 2px 2px 0px pink,
+  -2px -2px 0px pink;
+}
+
+li:hover a {
+  text-shadow: 2px 2px 0px pink,
+              -2px -2px 0px pink;
+  color: dodgerblue;
+}
+
+li h3 a:hover {
+  text-decoration: underline;
+}
+
+del {
+  color: red;
+}
+
+em {
+  font-style: normal;
+}
+
+em:hover a {
+  font-style: italic;
+  color: red;
+}
+
+a {
+  text-shadow: 2px 2px 0px pink,
+              -2px -2px 0px pink;
+  color: dodgerblue;
+  text-decoration: none;
+}
+
+a:hover {
+  font-style: italic;
+  color: red;
+}
+
+strong {
+  text-shadow: 2px 2px 0px pink,
+              -2px -2px 0px pink;
+  color: dodgerblue;
+}
+
+strong.complete {
+  color: red;
+}
+
+em a {
+  text-shadow: none;
+}
+
+h3 a {
+  text-shadow: none;
+}
+
+.describe {
+  width: 300px;
+}
+
+
+
+/* animations */
+@keyframes spin {
+  from { transform: rotateX(0deg); }
+  to { transform: rotateX(360deg); }
+}

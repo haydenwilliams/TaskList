@@ -1,0 +1,20 @@
+<h1>EDIT TASK FORM FiNE-GrAIN-DeTAIL</h1>
+
+<h2><%= link_to "de-spin", tasks_path %></h2>
+
+<%= form_with model: @task do |f| %>
+
+<p>
+  <%= f.label @task.action %>
+</p>
+
+<%= f.text_field :action, placeholder: "New Spin?", value: "" %>
+
+<p>
+  <%= f.label @task.description %>
+</p>
+
+<%= f.text_field :description, class: "describe", placeholder: "be good 2 urself bb...", value: "" %>
+<%= f.submit "re-spin task" %>
+
+<% end %>
