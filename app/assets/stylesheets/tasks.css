@@ -87,36 +87,33 @@ ul {
 li {
   text-align: right;
   color: black;
-}
-
-li a {
-  text-decoration: none;
-  color: black;
-}
-
-li:hover {
   border: 5px dashed pink;
   padding-left: 50px;
   padding-right: 15px;
   box-shadow: 2px 2px 3px black;
 }
 
-li:hover h3 {
-  color: dodgerblue;
-}
-li:hover del {
-  text-shadow: 2px 2px 0px pink,
-  -2px -2px 0px pink;
+li:hover {
+  border: 5px dashed dodgerblue;
 }
 
-li:hover a {
+li a {
+  text-decoration: none;
   text-shadow: 2px 2px 0px pink,
               -2px -2px 0px pink;
   color: dodgerblue;
 }
 
+li h3 {
+  color: dodgerblue;
+  text-shadow: 2px 2px 0px pink,
+              -2px -2px 0px pink;
+}
+
 li h3 a:hover {
   text-decoration: underline;
+  text-shadow: 2px 2px 0px dodgerblue,
+              -2px -2px 0px dodgerblue;
 }
 
 del {
@@ -129,7 +126,9 @@ em {
 
 em:hover a {
   font-style: italic;
-  color: red;
+  color: pink;
+  text-shadow: 2px 2px 0px dodgerblue,
+              -2px -2px 0px dodgerblue;
 }
 
 a {
@@ -141,7 +140,7 @@ a {
 
 a:hover {
   font-style: italic;
-  color: red;
+  color: pink;
 }
 
 strong {
@@ -152,14 +151,6 @@ strong {
 
 strong.complete {
   color: red;
-}
-
-em a {
-  text-shadow: none;
-}
-
-h3 a {
-  text-shadow: none;
 }
 
 .describe {
