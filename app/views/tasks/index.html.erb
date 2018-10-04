@@ -17,28 +17,37 @@
 
       <section class="tasks">
         <ul>
-          <% @tasks.each do |task| %>
-          <li>
-            <p>
-              <h3><%= link_to "#{task[:action]}", task_path(task.id) %></h3>
-              <h4><%= task.description %></h4>
-            </p>
+          <% if @tasks.empty? %>
+            <li>
+              <p>
+                <h3>NO TASKS INITIATED</h3>
+                <h4>make some tasks already, bitch!</h4>
+              </p>
+            </li>
+          <% else %>
+            <% @tasks.each do |task| %>
+            <li>
+              <p>
+                <h3><%= link_to "#{task[:action]}", task_path(task.id) %></h3>
+                <h4><%= task.description %></h4>
+              </p>
 
-            <p>
-              <% if task.completion_date == nil %>
-              <em><%= link_to "done?", update_task_date_path(task.id),
-              method: :patch %></em>
-              <% else %>
-              <em><del><%= task.completion_date %></del></em>
-              <% end %>
-              //
-              <em><%= link_to "edit", edit_task_path(task.id) %></em>
-              //
-              <em><%= link_to "del", task_path(task),
-                  method: :delete,
-                  data: { confirm: 'do u def want to del this ?' } %></em>
-            </p>
-          </li>
+              <p>
+                <% if task.completion_date == nil %>
+                <em><%= link_to "done?", update_task_date_path(task.id),
+                method: :patch %></em>
+                <% else %>
+                <em><del><%= task.completion_date %></del></em>
+                <% end %>
+                //
+                <em><%= link_to "edit", edit_task_path(task.id) %></em>
+                //
+                <em><%= link_to "del", task_path(task),
+                    method: :delete,
+                    data: { confirm: 'do u def want to del this ?' } %></em>
+              </p>
+            </li>
+            <% end %>
           <% end %>
         </ul>
       </section>
